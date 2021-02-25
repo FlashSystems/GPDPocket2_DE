@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xkbConfigRegistry SYSTEM "xkb.dtd">
+<xkbConfigRegistry version="1.1">
+  <layoutList>
+    <layout>
+      <configItem>
+        <name>custom</name>
+        <shortDescription>de (GPD)</shortDescription>
+        <description>German (GDP Pocket 2)</description>
+      </configItem>
+      <variantList/>
+    </layout>
+  </layoutList>
+</xkbConfigRegistry>

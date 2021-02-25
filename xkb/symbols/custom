@@ -1,0 +1,52 @@
+default partial alphanumeric_keys modifier_keys
+xkb_symbols "gpdpockettwo" {
+	include "de(nodeadkeys)"
+
+	name[Group1] = "German (GPD Pocket 2)";
+
+	key.type[Group1] = "FOUR_LEVEL";
+
+	// AOUS mit ÄÖÜß belegen
+	key <AC01> { [ a, A, adiaeresis, Adiaeresis] };
+	key <AD09> { [ NoSymbol, NoSymbol, odiaeresis, Odiaeresis] };
+	key <AD07> { [ NoSymbol, NoSymbol, udiaeresis, Udiaeresis] };
+	key <AC02> { [ NoSymbol, NoSymbol, ssharp, 0x1001E9E] }; // uppercase S sharp
+
+	// Remap the Number row
+	key <AE01> { [ NoSymbol, NoSymbol, asciicircum, degree ] };
+	key <AE02> { [ NoSymbol, NoSymbol, at, twosuperior ] };
+	key <AE03> { [ NoSymbol, NoSymbol, numbersign, threesuperior ] };
+	key <AE04> { [ NoSymbol, NoSymbol, dollar ] };
+	key <AE05> { [ NoSymbol, NoSymbol, percent, permille] };
+	key <AE06> { [ NoSymbol, NoSymbol, asciicircum ] };
+	key <AE07> { [ NoSymbol, NoSymbol, ampersand ] };
+	key <AE08> { [ NoSymbol, NoSymbol, asterisk ] };
+	key <AE09> { [ NoSymbol, NoSymbol, parenleft ] };
+	key <AE10> { [ NoSymbol, NoSymbol, parenright ] };
+
+	// Greater and Less on additional modifier_keys
+	key <AB08> { [ NoSymbol, NoSymbol, less ] };
+	key <AB09> { [ NoSymbol, NoSymbol, greater ] };
+
+	// The slash/questionmark key is used as the numbersign/apostrophe key.
+	key <AB10> { [ numbersign, apostrophe, slash, question]};
+
+	// After installing the Chinese keyboard firmware AE13 is TLDE
+	key <AE13> { [ degree, asciitilde, grave, asciitilde ] };
+
+	// Some Keys must be completely remapped because they are schatterd all over the place
+	key <AC10> { [ semicolon, colon, semicolon, colon ] };
+	key <AC11> { [ apostrophe, quotedbl, question, VoidSymbol ]};
+	key <AD11> { [ acute, grave, bracketleft, braceleft ] };
+	key <AD12> { [ numbersign, apostrophe, bracketright, braceright ] };
+	key <AC12> { [ backslash, bar, backslash, bar  ] };
+	key <AE11> { [ minus, underscore, minus, underscore ] };
+	key <AE12> { [ plus, asterisk, equal, plus] };
+
+	// Make the TLDE key (The chinese key on the keyboard) the AltGr key
+	key <TLDE> {
+		type[Group1]="ONE_LEVEL",
+		symbols[Group1] = [ ISO_Level3_Shift ]
+	};
+	include "level3(modifier_mapping)"
+};

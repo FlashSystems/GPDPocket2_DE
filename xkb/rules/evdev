@@ -1,0 +1,5 @@
+// Note: no rules file entries are required for for a custom layout
+//! option = symbols
+
+// Include the system 'evdev' file
+! include %S/evdev
