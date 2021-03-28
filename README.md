@@ -2,7 +2,7 @@
 
 ## Vorbereiten der Firmware
 
-Die englische Tastaturfirmware des GPD Pocket 2 macht aus der, mit japanischen Schriftzeichen bedruckten, Taste ein Duplikat der `TLDE`-Taste. Dabei könnte man diese Taste für nütlicheres verwenden: Dieses Tastaturlayout verwendet diese Taste als AltGr-Taste. Damit das funktioniert, muss die Japanische Tastatur-Firmware instaliert werden. Am besten erledigt man dies, solange noch Windows auf dem GPD Pocket 2 installiert ist. Ist Linux schon installiert, lässt sich das Update problemlos mit einem [c't Notfall Windows](https://www.heise.de/ct/artikel/c-t-Notfall-Windows-2021-4954598.html) installieren.
+Die englische Tastaturfirmware des GPD Pocket 2 macht aus der, mit japanischen Schriftzeichen bedruckten, Taste ein Duplikat der <kbd>TLDE</kbd>-Taste. Dabei könnte man diese Taste für nützlicheres verwenden: Dieses Tastaturlayout verwendet diese Taste als <kbd>AltGr</kbd>-Taste. Damit das funktioniert, muss die Japanische Tastatur-Firmware installiert werden. Am besten erledigt man dies, solange noch Windows auf dem GPD Pocket 2 installiert ist. Ist Linux schon installiert, lässt sich das Update problemlos mit einem [c't Notfall Windows](https://www.heise.de/ct/artikel/c-t-Notfall-Windows-2021-4954598.html) installieren.
 
 Das Update kann direkt von der [GPD-Webseite](https://www.gpd.hk/gpdp2firmware) heruntergeladen werden. Es ist unter "Driver & BIOS" als "GPD Pocket 2 Keyboard Firmware (Japan)" zu finden.
 
@@ -12,9 +12,9 @@ Nachdem das Firmware-Update installiert ist, sind die <kbd>半/全</kbd> und die
 
 ## Was heißt 半/全?
 
-Wer nicht etwas Klugscheißerwissen bunkern möchte, kann den nachfolgenden Absatz getrost überspringen.
+Wer nicht etwas Klugscheißer-Wissen bunkern möchte, kann den nachfolgenden Absatz getrost überspringen.
 
-Die <kbd>半/全</kbd>-Taste heißt ausgeschrieben wohl 半角/全角, was sich mit "halbe Breite/volle Breite" übersetzen lässt. Die [englische Wikipedia](https://en.wikipedia.org/wiki/Halfwidth_and_fullwidth_forms) hat hierzu folgende Infos:
+Die <kbd>半/全</kbd>-Taste heißt ausgeschrieben wohl 半角/全角, was sich mit "halbe Breite/volle Breite" übersetzen lässt. Die [englische Wikipedia](https://en.wikipedia.org/wiki/Halfwidth_and_fullwidth_forms) hat hierzu folgende Informationen parat:
 
 > Bei CJK (Chinesisch, Japanisch und Koreanisch) Software werden grafische Zeichen traditionell in Zeichen mit voller Breite (in Taiwan und Hong Kong: 全形; in CJK: 全角) und Zeichen mit halber Breite (in Taiwan und Hong Kong: 半形; in CJK: 半角) unterteilt. Bei Festbreitenschriftarten belegt ein Zeichen mit halber breite die Hälfte des horizontalen Platzes eines Zeichens mit voller Breite.
 
@@ -38,11 +38,11 @@ Nachfolgend alle Änderungen, dieses Tastaturlayouts im Überblick:
 - Die Taste <kbd>半/全</kbd> wird als <kbd>Alt Gr</kbd> verwendet. Daher nenne ich sie nachfolgend auch <kbd>Alt Gr</kbd>.
 - Die Umlaute sind auf die Tasten <kbd>A</kbd>, <kbd>O</kbd> und <kbd>U</kbd> gelegt und lassen sich per <kbd>Atl Gr</kbd> erreichen.
 - Auch das scharfe S ist über <kbd>Alt Gr</kbd>+<kbd>S</kbd> erreichbar.
-- Die Sonderzeichen auf den Zifferntasten entsprechen der deutschen Belegung, so dass hier alles wie gewohnt per <kbd>Shift</kbd> erreichbar ist.
+- Die Sonderzeichen auf den Zifferntasten entsprechen der deutschen Belegung, sodass hier alles wie gewohnt per <kbd>Shift</kbd> erreichbar ist.
   - Die aufgedruckten Sonderzeichen lassen sich über die <kbd>Alt Gr</kbd>-Taste abrufen.
 - Die Tasten für die Sonderzeichen in der ersten Reihe sind etwas anders belegt. Die Belegung der Tasten mit den eckigen Klammern muss man sich leider merken.
   - Mit <kbd>Alt Gr</kbd> bekommt man hier auch wieder die aufgedruckten Zeichen.
-- Das Fragezeichen ist zusätzlich auf die Taste neben dem Steuerkreuz gewandert, so dass man es nicht nur per <kbd>Alt Gr</kbd>+<kbd>Shift</kbd>+<kbd>#</kbd> erreichen kann.
+- Das Fragezeichen ist zusätzlich auf die Taste neben dem Steuerkreuz gewandert, sodass man es nicht nur per <kbd>Alt Gr</kbd>+<kbd>Shift</kbd>+<kbd>#</kbd> erreichen kann.
 
 Auch wenn das Layout auf den ersten Blick etwas komisch anmutet, schreibt es sich nach kurzer Eingewöhnung besser als mit einem englischen oder deutschen Standardlayout.
 
@@ -65,7 +65,7 @@ Da aber xkeyboard-config Version 2.33 noch nicht zur Verfügung steht (Stand vom
     </layout>
 ```
 
-Am besten tut ma dies vor dem Schließenden `</layoutList>` um nichts durcheinander zu bringen.
+Am besten tut man dies vor dem Schließenden `</layoutList>`, um nichts durcheinander zu bringen.
 
 Damit greifen wir der für xkeyboard-config Version 2.33 geplanten Änderung vor. Nach einem Update von xkeyboard-config auf eine Version vor 2.33 muss die Änderung erneut eingefügt werden. Ab xkeyboard-config Version 2.33, ist sie nicht mehr notwendig.
 
@@ -80,7 +80,7 @@ Das Mapping der Tasten wird über die Datei `custom` im Verzeichnis `symbols` de
 - <kbd>Alt Gr</kbd>
 - <kbd>Alt Gr</kbd>+<kbd>Shift</kbd>
 
-Die Testen werden in den Tastaturlayouts unter Verwendung der Tastencodes definiert. In der Regel bestehend die Tastencodes aus der Position der Taste auf der Tastatur. Die Zeilen werden als Buchstaben, die Spalten als Ziffern kodiert. `AB01` ist also die erste Taste in der zweiten Zeile der Tastatur.
+Die Tasten werden in den Tastaturlayouts unter Verwendung der Tastencodes definiert. In der Regel bestehend die Tastencodes aus der Position der Taste auf der Tastatur. Die Zeilen werden als Buchstaben, die Spalten als Ziffern kodiert. `AB01` ist also die erste Taste in der zweiten Zeile der Tastatur.
 
 Bei der Tastatur des GPD Pocket 2 ist das leider etwas komplizierter, da die Tasten wild durch die Gegend geschoben wurde. Die Zuordnung der Tastencodes für die japanischen Tastatur-Firmware sieht folgendermaßen aus:
 
@@ -99,16 +99,16 @@ Diese Zeile überschreibt die Zuordnung der Taste `AC01` mit den folgenden werte
 |:------:|:-----------------:|:----------------:|:-----------------:|:----------------------:|
 | `AC01` | `a` | `A` | `ä` | `Ä` |
 
-Die Namen der Tasten (wie "adiaeresis" für "ä") kann man sich einfach in der Date des deutsch Tastaturlayouts ausleihen (`/usr/share/X11/xkb/symbols/de`).
+Die Namen der Tasten (wie "adiaeresis" für "ä") kann man sich einfach in der Datei des deutsch Tastaturlayouts ausleihen (`/usr/share/X11/xkb/symbols/de`).
 
 Anpassungen werden nach einem Neustart der Sitzung des Fenstermanagers aktiv.
 
-**Achtung**: Änderungen am aktiven Tastaturlayout können den GPD Pocket 2 unbenutzbar machen. Es empfiehlt sich einen SSH-Server für den Fernzugriff einzurichten bevor man Änderungen am Layout vornimmt. Wenn man sich die Sitzung über `screen` oder `tmux` mit einem in Gnome geöffneten Terminal teilt, kann man in der Gnome-Sitzung über `gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'en')]"` das Tastaturlayout wieder auf English ändern.
+**Achtung**: Änderungen am aktiven Tastaturlayout können den GPD Pocket 2 unbenutzbar machen. Es empfiehlt sich einen SSH-Server für den Fernzugriff einzurichten bevor man Änderungen am Layout vornimmt. Wenn man sich die Sitzung über `screen` oder `tmux` mit einem in Gnome geöffneten Terminal teilt, kann man in der Gnome-Sitzung über `gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'en')]"` das Tastaturlayout wieder auf Englisch ändern.
 
 ## Y/Z tauschen
 
-Das Tastaturlayout belegt natürlich die Tasten <kbd>Y</kbd> und <kbd>Z</kbd>, wie es für ein deutsches Tastaturlayout üblich ist. Damit ist jedoch die Beschriftung auf der Tastatur des GPD Pocket 2 nicht mehr korrekt. Mutige können die Kappen der beiden Tasten vertauschen (sie haben die gleiche Größe) und damit die Hardware der Software anpassen. Um die Tasten nicht zu beschädigen muss man darauf achten, jede Taste von der, dem Bildschirm zugewandten Seite aus, nach oben zu hebeln. Die Tasten sind auf dieser Seite geklipt und auf der anderen mit einer Nut geführt. Auf der falschen Seite zu hebeln, kann diese Führung abbrechen. Am besten zieht man die Taste nach oben und kippt sie dabei vom Bildschirm weg.
+Das Tastaturlayout belegt natürlich die Tasten <kbd>Y</kbd> und <kbd>Z</kbd>, wie es für ein deutsches Tastaturlayout üblich ist. Damit ist jedoch die Beschriftung auf der Tastatur des GPD Pocket 2 nicht mehr korrekt. Mutige können die Kappen der beiden Tasten vertauschen (sie haben die gleiche Größe) und damit die Hardware der Software anpassen. Um die Tasten nicht zu beschädigen, muss man darauf achten, jede Taste von der, dem Bildschirm zugewandten Seite aus, nach oben zu hebeln. Die Tasten sind auf dieser Seite eingerastet und auf der anderen mit einer Nut geführt. Auf der falschen Seite zu hebeln, kann diese Führung abbrechen. Am besten zieht man die Taste nach oben und kippt sie dabei vom Bildschirm weg.
 
 Zum Wiedereinsetzen kann man die Führung auf der dem Bildschirm abgewandten Seite einfädeln und die Taste dann fest herunterdrücken bis rechts und links einrastet.
 
-**Achtung**: Das Tauschen der Tastenkappen kann diese beschädigen. Wer es versuchen möchte handelt auf eigenes Risiko.
+**Achtung**: Das Tauschen der Tastenkappen kann diese beschädigen. Wer es versuchen möchte, handelt auf eigenes Risiko.
