@@ -4,9 +4,9 @@
   <layoutList>
     <layout>
       <configItem>
-        <name>custom</name>
+        <name>gpdpockettwo</name>
         <shortDescription>de (GPD)</shortDescription>
-        <description>German (GDP Pocket 2)</description>
+        <description>Deutsch (GPD Pocket 2)</description>
       </configItem>
       <variantList/>
     </layout>

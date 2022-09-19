@@ -48,28 +48,9 @@ Auch wenn das Layout auf den ersten Blick etwas komisch anmutet, schreibt es sic
 
 ## Installation des Layouts
 
-Würde Gnome `libxkbregistry` verwenden, würde es genügen die Dateien aus `xkb` unter `~/.config/xkb` abzulegen um das neue, benutzerspezifische Layout verwenden zu können. Doch leider Funktioniert das mit Gnome 39 noch nicht.
+Da Gnome ab Version 40 `libxkbregistry` verwendet, genügt es die Dateien aus `xkb` unter `~/.config/xkb` abzulegen um das neue, benutzerspezifische Layout verwenden zu können.
 
-Peter Hutterer hat für die Version 2.33 von `xkeyboard-config` (welche die Tastaturlayouts für fast alle Linux-Distributionen bereitstellt) eine [Änderung](https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config/-/merge_requests/189/) eingebracht, welche das Layout `custom` reserviert. Über diese hat er auch in seinem [Blog](http://who-t.blogspot.com/2021/02/a-pre-supplied-custom-keyboard-layout.html) geschrieben.
-
-Da aber xkeyboard-config Version 2.33 noch nicht zur Verfügung steht (Stand vom 27.03.2021), müssen wir uns selbst behelfen. In die Dateien `/usr/share/X11/xkb/rules/base.xml` und `/usr/share/X11/xkb/rules/evdev.xml` muss hierfür im XML-Tag `layoutList` folgendes hinzugefügt werden:
-
-```xml
-    <layout>
-      <configItem>
-        <name>custom</name>
-        <shortDescription>custom</shortDescription>
-        <description>A user-defined custom Layout</description>
-      </configItem>
-      <variantList></variantList>
-    </layout>
-```
-
-Am besten tut man dies vor dem Schließenden `</layoutList>`, um nichts durcheinander zu bringen.
-
-Damit greifen wir der für xkeyboard-config Version 2.33 geplanten Änderung vor. Nach einem Update von xkeyboard-config auf eine Version vor 2.33 muss die Änderung erneut eingefügt werden. Ab xkeyboard-config Version 2.33, ist sie nicht mehr notwendig.
-
-Danach kann das Layout über die Kommandozeile `gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'custom')]"` aktiviert werden. Diese wählt das xkb-Layout mit dem Namen `custom` aus. Das Laden aus dem Benutzerverzeichnis funktioniert unter Gnome 39 auf Arch Linux bereits. Sollte es nicht klappen, muss man die `custom` Datei aus `~/.config/xkb/symbols` nach `/usr/share/X11/xkb/rules/` kopieren. Diese Datei sollte auch mit xkeyboard-config 2.33 nicht mehr überschrieben werden.
+Nachdem man sich neu angemeldet hat, lässt sich das Tastaturlayout in den Gnome-Einstellungen auswählen. Es ist unter "Weitere" zu finden, indem man nach "GPD" sucht.
 
 ## Anpassen des Layouts
 
