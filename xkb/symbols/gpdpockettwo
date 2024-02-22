@@ -28,9 +28,9 @@ xkb_symbols "gpdpockettwo" {
 	key <AB08> { [ NoSymbol, NoSymbol, less ] };
 	key <AB09> { [ NoSymbol, NoSymbol, greater ] };
 
-	// The slash/questionmark key is ok by default, but must yield it's original
+	// The slash is remapped to the number sign, but must yield it's original
 	// symbols on AltGr
-	key <AB10> { [ numbersign, apostrophe, slash, question]};
+	key <AB10> { [ numbersign, question, slash, question]};
 
 	// After installing the Chinese keyboard firmware AE13 is TLDE
 	key <AE13> { [ degree, asciitilde, grave, asciitilde ] };
